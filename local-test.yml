@@ -1,0 +1,15 @@
+name: Test runner local
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - name: Clonar repo
+        uses: actions/checkout@v3
+
+      - name: Mensaje de validación
+        run: echo "✅ Runner local funcionando correctamente"
